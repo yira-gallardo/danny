@@ -3,10 +3,12 @@ import Image from "next/image";
 import Link from "next/link";
 import { Inter } from "next/font/google";
 import styles from "@/styles/Home.module.css";
+import { useState } from "react";
 
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
+  const [portafolioActivo, ponerPortfolioActivo] = useState(false);
   return (
     <>
       <Head>
@@ -18,7 +20,9 @@ export default function Home() {
       <nav className={styles.nav}>
         <div className={styles.left}>
           <Link href="/">
-            <div className={styles.logo}>
+            <div
+              className={styles.logo}
+              onClick={() => ponerPortfolioActivo(false)} >
               <Image
                 src="/img/logo.png"
                 alt="casas"
@@ -30,7 +34,12 @@ export default function Home() {
             </div>
           </Link>
         </div>
-        <div className={styles.center}>portafolio</div>
+        <div
+          className={styles.center}
+          onClick={() => ponerPortfolioActivo(true)}
+        >
+          portafolio
+        </div>
         <div className={styles.right}>contacto</div>
       </nav>
       <main className={styles.main}>
@@ -57,6 +66,7 @@ export default function Home() {
                   A mountain of entertaiment
                 </div>
               </div>
+              <div className={styles.overlay} />
             </div>
             <div className={styles.videoType2}>
               <video autoPlay muted loop>
@@ -68,6 +78,7 @@ export default function Home() {
                   A mountain of entertaiment
                 </div>
               </div>
+              <div className={styles.overlay} />
             </div>
             <div className={styles.videoType3}>
               <video autoPlay muted loop>
@@ -79,6 +90,7 @@ export default function Home() {
                   A mountain of entertaiment
                 </div>
               </div>
+              <div className={styles.overlay} />
             </div>
             <div className={styles.videoType4}>
               <video autoPlay muted loop>
@@ -90,6 +102,7 @@ export default function Home() {
                   A mountain of entertaiment
                 </div>
               </div>
+              <div className={styles.overlay} />
             </div>
           </div>
           <div className={styles.right}>
@@ -103,8 +116,8 @@ export default function Home() {
                   A mountain of entertaiment
                 </div>
               </div>
+              <div className={styles.overlay} />
             </div>
-
             <div className={styles.videoType4}>
               <video autoPlay muted loop>
                 <source src="img/video-test-1.mp4" type="video/mp4" />
@@ -115,6 +128,7 @@ export default function Home() {
                   A mountain of entertaiment
                 </div>
               </div>
+              <div className={styles.overlay} />
             </div>
             <div className={styles.videoType1}>
               <video autoPlay muted loop>
@@ -126,6 +140,7 @@ export default function Home() {
                   A mountain of entertaiment
                 </div>
               </div>
+              <div className={styles.overlay} />
             </div>
             <div className={styles.videoType3}>
               <video autoPlay muted loop>
@@ -137,10 +152,71 @@ export default function Home() {
                   A mountain of entertaiment
                 </div>
               </div>
+              <div className={styles.overlay} />
             </div>
           </div>
         </section>
       </main>
+      {portafolioActivo && (
+        <div className={styles.portafolio}>
+          <div className={styles.clientes}>
+            <div className={styles.left}>
+              <Link href="/adidas" className={styles.link}>
+                Adidas
+              </Link>
+              <Link href="/amazon" className={styles.link}>
+                Amazon
+              </Link>
+              <Link href="/crunch" className={styles.link}>
+                Crunch
+              </Link>
+              <Link href="/decathlon" className={styles.link}>
+                Decathlon
+              </Link>
+              <Link href="/dosEquis" className={styles.link}>
+                Dos Equis
+              </Link>
+              <Link href="/uber" className={styles.link}>
+                Uber Eats
+              </Link>
+            </div>
+            <div className={styles.center}>
+              <Link href="/Fiat" className={styles.link}>
+                Fiat
+              </Link>
+              <Link href="/hunts" className={styles.link}>
+                HUNTS
+              </Link>
+              <Link href="/indio" className={styles.link}>
+                Indio
+              </Link>
+              <Link href="/joseCuervo" className={styles.link}>
+                José Cuervo
+              </Link>
+              <Link href="/mg" className={styles.link}>
+                MG
+              </Link>
+            </div>
+            <div className={styles.right}>
+              <Link href="/nestle" className={styles.link}>
+                Nestlé
+              </Link>
+              <Link href="/nocheBuena" className={styles.link}>
+                Noche Buena
+              </Link>
+              <Link href="/palacio" className={styles.link}>
+                Palacio de Hierro
+              </Link>
+              <Link href="/santander" className={styles.link}>
+                Santander
+              </Link>
+              <Link href="/snickers" className={styles.link}>
+                Snickers
+              </Link>
+            </div>
+          </div>
+        </div>
+      )}
       <footer className={styles.footer}>
         CASAS 2023® todos los derechos reservados
       </footer>
