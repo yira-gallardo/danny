@@ -9,6 +9,8 @@
   height: 80px;
   align-items: center;
   padding: 0 40px;
+  color: white;
+  cursor: pointer;
 }
 .logo {
   width: 100px;
@@ -17,6 +19,7 @@
   width: 100%;
   height: auto;
 }
+
 .header .video {
   width: 100%;
   height: 100vh;
@@ -47,6 +50,7 @@
 }
 .videos {
   display: flex;
+  cursor: pointer;
 }
 .videos .left {
   width: 50%;
@@ -66,6 +70,38 @@
   align-items: center;
   padding-bottom: 50px;
   flex-direction: column;
+  transition-duration: 2s;
+  z-index: 2;
+}
+.videos .content:hover {
+  opacity: 0.5;
+  transition-duration: 1s;
+}
+.videos .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.337);
+  z-index: 1;
+  transition-duration: 1s;
+}
+.videos .videoType1:hover .overlay {
+  background-color: rgba(0, 0, 0, 0);
+  transition-duration: 0.5s;
+}
+.videos .videoType2:hover .overlay {
+  background-color: rgba(0, 0, 0, 0);
+  transition-duration: 0.5s;
+}
+.videos .videoType3:hover .overlay {
+  background-color: rgba(0, 0, 0, 0);
+  transition-duration: 0.5s;
+}
+.videos .videoType4:hover .overlay {
+  background-color: rgba(0, 0, 0, 0);
+  transition-duration: 0.5s;
 }
 .videos .content .title {
   font-size: 2em;
@@ -106,6 +142,29 @@
 }
 .videos .videoType4 video {
   width: 100%;
+}
+.portafolio {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: black;
+  width: 100%;
+  height: 100vh;
+  z-index: 998;
+  justify-content: center;
+  display: flex;
+  align-items: center;
+}
+.portafolio .clientes {
+  display: flex;
+}
+.portafolio .link {
+  display: block;
+  font-size: 1.5em;
+  padding: 4px 20px;
+}
+.portafolio .link:hover {
+  opacity: 0.5;
 }
 .footer {
   background-color: black;
