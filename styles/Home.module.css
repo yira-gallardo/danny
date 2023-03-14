@@ -162,6 +162,7 @@
   display: block;
   font-size: 1.5em;
   padding: 4px 20px;
+  color: white;
 }
 .portafolio .link:hover {
   opacity: 0.5;
@@ -172,4 +173,41 @@
   color: #646464;
   text-align: center;
   font-size: 0.8em;
+}
+@media only screen and (max-width: 1000px) {
+  .header .video video {
+    width: auto;
+    height: 100%;
+  }
+  .header .content .title {
+    font-size: 2.5em;
+    margin-bottom: 20px;
+  }
+  .videos {
+    display: block;
+  }
+  .videos .left {
+    width: 100%;
+    display: block;
+  }
+  .videos .right {
+    width: 100%;
+    display: block;
+  }
+  .videos .videoType1 video {
+    width: auto;
+    height: 100%;
+  }
+  .videos .videoType2 video {
+    width: auto;
+    height: 100%;
+  }
+  .videos .videoType3 video {
+    width: auto;
+    height: 100%;
+  }
+  .videos .videoType4 video {
+    width: auto;
+    height: 100%;
+  }
 }
