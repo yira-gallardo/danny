@@ -22,7 +22,8 @@ export default function Home() {
           <Link href="/">
             <div
               className={styles.logo}
-              onClick={() => ponerPortfolioActivo(false)} >
+              onClick={() => ponerPortfolioActivo(false)}
+            >
               <Image
                 src="/img/logo.png"
                 alt="casas"
@@ -40,7 +41,11 @@ export default function Home() {
         >
           portafolio
         </div>
-        <div className={styles.right}>contacto</div>
+        <div className={styles.right}>
+          <div className={styles.mail}>
+            <a href="mailto:dannycasas1993@gmil.com">contacto</a>
+          </div>
+        </div>
       </nav>
       <main className={styles.main}>
         <section className={styles.header}>
